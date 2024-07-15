@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        string sequence;
+        cin >> sequence;
+
+        bool hasOne = false;
+        for (char c : sequence) {
+            if (c == '1') {
+                hasOne = true;
+                break;
+            }
+        }
+
+        if (hasOne) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+    }
+
+    return 0;
+}
